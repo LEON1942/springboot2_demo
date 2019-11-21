@@ -27,11 +27,11 @@
         </plugins>
     </build>
     
-## 2、 在resources目录下新建static目录、template目录和application.properties文件
+## 2、 在resources目录下新建static目录、templates目录和application.properties文件
 
 static目录用于存放静态资源文件；
 
-template目录用于存放前端页面模板文件；
+templates目录用于存放前端页面模板文件；
 
 application.properties文件用于写入Spring的配置项；
 
