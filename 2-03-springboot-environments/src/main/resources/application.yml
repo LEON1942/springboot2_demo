@@ -1,0 +1,24 @@
+
+spring:
+  profiles:
+    active: dev
+  http:
+    encoding:
+      charset: UTF-8
+
+  thymeleaf:
+    encoding: UTF-8
+
+  mvc:
+    date-format: yyyy-MM-dd
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss SSS
+    time-zone: GMT+8
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+[INFO ] 2019-11-28 09:29:10 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 14877 (/Users/leon1942/Documents/java/applications/springboot2_demo/2-03-springboot-environments/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/2-03-springboot-environments)
+[INFO ] 2019-11-28 09:29:10 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: prd
+[INFO ] 2019-11-28 09:29:10 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 80 (http)
+[INFO ] 2019-11-28 09:29:10 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+[INFO ] 2019-11-28 09:29:10 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-11-28 09:29:10 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-11-28 09:29:10 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-11-28 09:29:10 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2241 ms
+[INFO ] 2019-11-28 09:29:10 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-11-28 09:29:10 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-11-28 09:29:10 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+[INFO ] 2019-11-28 09:29:10 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+[INFO ] 2019-11-28 09:29:10 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.79 seconds (JVM running for 7.049)
+[INFO ] 2019-11-28 09:29:10 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
