@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h3>Hello SpringBoot!</h3>
-<h4>LEON1942</h4>
-</body>
+<html xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+        layout:decorator="base"><!-- layout文件路径-->
+
+<div layout:fragment="content">
+    页面主体内容
+</div>
+
+<div layout:fragment="footer">
+    这是继承模板之后的页脚1
+</div>
+
 </html>

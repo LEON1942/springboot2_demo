@@ -1,0 +1,758 @@
+[INFO ] 2019-12-03 08:44:50 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 66907 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 08:44:50 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 08:44:50 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 08:44:50 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 08:44:50 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 08:44:50 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 08:44:50 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 08:44:50 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2167 ms
+[INFO ] 2019-12-03 08:44:50 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 08:44:50 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 08:44:50 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 08:44:50 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 08:44:50 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 5.174 seconds (JVM running for 7.313)
+[INFO ] 2019-12-03 08:44:50 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 08:44:50 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 08:44:50 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+[INFO ] 2019-12-03 08:44:50 [http-nio-8086-exec-6] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:44:50 [http-nio-8086-exec-3] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:44:50 [http-nio-8086-exec-7] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:44:50 [http-nio-8086-exec-9] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:44:50 [http-nio-8086-exec-10] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:44:50 [http-nio-8086-exec-8] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:44:50 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 08:48:16 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 67798 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 08:48:16 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 08:48:16 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 08:48:16 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 08:48:16 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 08:48:16 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 08:48:16 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 08:48:16 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1962 ms
+[INFO ] 2019-12-03 08:48:16 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 08:48:16 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 08:48:16 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 08:48:16 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 08:48:16 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.26 seconds (JVM running for 5.766)
+[INFO ] 2019-12-03 08:48:16 [http-nio-8086-exec-5] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:48:16 [http-nio-8086-exec-4] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:48:16 [http-nio-8086-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 08:48:16 [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 08:48:16 [http-nio-8086-exec-6] o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+[INFO ] 2019-12-03 08:48:16 [http-nio-8086-exec-8] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:48:16 [http-nio-8086-exec-7] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:48:16 [http-nio-8086-exec-4] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:48:16 [http-nio-8086-exec-7] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:48:16 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 08:49:42 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 68165 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 08:49:42 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 08:49:42 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 08:49:42 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 08:49:42 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 08:49:42 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 08:49:42 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 08:49:42 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3033 ms
+[INFO ] 2019-12-03 08:49:42 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 08:49:42 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 08:49:42 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 08:49:42 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 08:49:42 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 5.35 seconds (JVM running for 7.186)
+[INFO ] 2019-12-03 08:49:42 [http-nio-8086-exec-1] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:49:42 [http-nio-8086-exec-3] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:49:42 [http-nio-8086-exec-4] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:49:42 [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 08:49:42 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 08:49:42 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+[INFO ] 2019-12-03 08:49:42 [http-nio-8086-exec-6] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:49:42 [http-nio-8086-exec-7] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:49:42 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 08:53:34 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 69151 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 08:53:34 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 08:53:34 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 08:53:34 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 08:53:34 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 08:53:34 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 08:53:34 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 08:53:34 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4796 ms
+[INFO ] 2019-12-03 08:53:34 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 08:53:34 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 08:53:34 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 08:53:34 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 08:53:34 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 9.742 seconds (JVM running for 12.025)
+[INFO ] 2019-12-03 08:53:34 [http-nio-8086-exec-1] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:53:34 [http-nio-8086-exec-2] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:53:34 [http-nio-8086-exec-3] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:53:34 [http-nio-8086-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 08:53:34 [http-nio-8086-exec-4] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 08:53:34 [http-nio-8086-exec-4] o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
+[INFO ] 2019-12-03 08:53:34 [http-nio-8086-exec-9] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:53:34 [http-nio-8086-exec-10] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 08:53:34 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:10:54 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 73756 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 09:10:54 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 09:10:54 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 09:10:54 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:10:54 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 09:10:54 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 09:10:54 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 09:10:54 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1957 ms
+[INFO ] 2019-12-03 09:10:54 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:10:54 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 09:10:54 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:10:54 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 09:10:54 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.134 seconds (JVM running for 5.161)
+[INFO ] 2019-12-03 09:10:54 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:10:54 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:10:54 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2019-12-03 09:10:54 [http-nio-8086-exec-5] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:10:54 [http-nio-8086-exec-7] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:10:54 [http-nio-8086-exec-6] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:10:54 [http-nio-8086-exec-8] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:10:54 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:11:56 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 74017 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 09:11:56 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 09:11:56 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 09:11:56 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:11:56 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 09:11:56 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 09:11:56 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 09:11:56 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1974 ms
+[INFO ] 2019-12-03 09:11:56 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:11:56 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 09:11:56 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:11:56 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 09:11:56 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.526 seconds (JVM running for 6.609)
+[INFO ] 2019-12-03 09:11:56 [http-nio-8086-exec-4] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:11:56 [http-nio-8086-exec-1] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:11:56 [http-nio-8086-exec-3] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:11:56 [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:11:56 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:11:56 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+[INFO ] 2019-12-03 09:11:56 [http-nio-8086-exec-5] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:11:56 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:12:36 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 74189 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 09:12:36 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 09:12:36 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 09:12:36 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:12:36 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 09:12:36 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 09:12:36 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 09:12:36 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1919 ms
+[INFO ] 2019-12-03 09:12:36 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:12:36 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 09:12:36 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:12:36 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 09:12:36 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.21 seconds (JVM running for 5.87)
+[INFO ] 2019-12-03 09:12:36 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:12:36 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:12:36 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2019-12-03 09:12:36 [http-nio-8086-exec-3] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:12:36 [http-nio-8086-exec-5] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:12:36 [http-nio-8086-exec-4] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:12:36 [http-nio-8086-exec-9] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:12:36 [http-nio-8086-exec-10] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:12:36 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:16:29 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 75185 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 09:16:29 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 09:16:29 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 09:16:29 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:16:29 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 09:16:29 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 09:16:29 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 09:16:29 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2121 ms
+[INFO ] 2019-12-03 09:16:29 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:16:29 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 09:16:29 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:16:29 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 09:16:29 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.459 seconds (JVM running for 5.938)
+[INFO ] 2019-12-03 09:16:29 [http-nio-8086-exec-4] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:16:29 [http-nio-8086-exec-2] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:16:29 [http-nio-8086-exec-1] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:16:29 [http-nio-8086-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:16:29 [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:16:29 [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+[INFO ] 2019-12-03 09:16:29 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:17:55 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 75546 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 09:17:55 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 09:17:55 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 09:17:55 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:17:55 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 09:17:55 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 09:17:55 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 09:17:55 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2483 ms
+[INFO ] 2019-12-03 09:17:55 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:17:55 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 09:17:55 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:17:55 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 09:17:55 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 5.039 seconds (JVM running for 6.659)
+[INFO ] 2019-12-03 09:17:55 [http-nio-8086-exec-1] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:17:55 [http-nio-8086-exec-2] o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:475)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2019-12-03 09:17:55 [http-nio-8086-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:17:55 [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:17:55 [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+[INFO ] 2019-12-03 09:17:55 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:20:18 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 76143 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 09:20:18 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 09:20:18 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 09:20:18 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:20:18 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 09:20:18 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 09:20:18 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 09:20:18 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2081 ms
+[INFO ] 2019-12-03 09:20:18 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:20:18 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 09:20:18 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:20:18 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 09:20:18 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.252 seconds (JVM running for 7.083)
+[INFO ] 2019-12-03 09:20:18 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:20:18 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:20:18 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2019-12-03 09:20:18 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:49:16 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 83463 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 09:49:16 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 09:49:16 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 09:49:16 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:49:16 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 09:49:16 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 09:49:16 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 09:49:16 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4960 ms
+[INFO ] 2019-12-03 09:49:16 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:49:16 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 09:49:16 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:49:16 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 09:49:16 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 9.807 seconds (JVM running for 11.604)
+[INFO ] 2019-12-03 09:49:16 [http-nio-8086-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:49:16 [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:49:16 [http-nio-8086-exec-5] o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+[INFO ] 2019-12-03 09:49:16 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:57:53 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 85632 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 09:57:53 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 09:57:53 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 09:57:53 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:57:53 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 09:57:53 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 09:57:53 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 09:57:53 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4075 ms
+[INFO ] 2019-12-03 09:57:53 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 09:57:53 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 09:57:53 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 09:57:53 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 09:57:53 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 8.064 seconds (JVM running for 9.378)
+[INFO ] 2019-12-03 09:57:53 [http-nio-8086-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:57:53 [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 09:57:53 [http-nio-8086-exec-3] o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+[INFO ] 2019-12-03 09:57:53 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 10:05:50 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 87626 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 10:05:50 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 10:05:50 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 10:05:50 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 10:05:50 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 10:05:50 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 10:05:50 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 10:05:50 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3772 ms
+[INFO ] 2019-12-03 10:05:50 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 10:05:50 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 10:05:50 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 10:05:50 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 10:05:50 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 8.084 seconds (JVM running for 10.656)
+[INFO ] 2019-12-03 10:05:50 [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 10:05:50 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 10:05:50 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+[INFO ] 2019-12-03 10:05:50 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 10:10:08 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on osx-yaoliang with PID 88741 (/Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for/target/classes started by leon1942 in /Users/leon1942/Documents/java/applications/springboot2_demo/3-01-springboot-thymeleaf-for)
+[INFO ] 2019-12-03 10:10:08 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-03 10:10:08 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-03 10:10:08 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 10:10:08 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-03 10:10:08 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-03 10:10:08 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-03 10:10:08 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3304 ms
+[INFO ] 2019-12-03 10:10:08 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-03 10:10:08 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-03 10:10:08 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-03 10:10:08 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-03 10:10:08 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 7.296 seconds (JVM running for 9.512)
+[INFO ] 2019-12-03 10:10:08 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-03 10:10:08 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-03 10:10:08 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+[INFO ] 2019-12-03 10:10:08 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
