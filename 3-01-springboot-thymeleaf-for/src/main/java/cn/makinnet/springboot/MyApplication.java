@@ -12,7 +12,7 @@ import javax.swing.*;
 
 @SpringBootApplication
 //启动时加载 config.properties
-@PropertySource("classpath:config.properties")
+@PropertySource("classpath:messages.properties")
 public class MyApplication {
 
     public static void main(String[] args) {
