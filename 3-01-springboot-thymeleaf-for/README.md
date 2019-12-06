@@ -1,359 +1,259 @@
-# Spring Boot 多环境变量配置与多环境日志输出配置
+# Spring Boot Thymeleaf 配置及语法
 
 SpringBoot 支持 .properties 与 .yml 的方式配置项目，其中.yml 支持多环境变量配置。
 
-为了更好地区分开发环境与线上环境的配置差异，这里讲述如何使用.yml进行环境配置.
+### 1、在 pom.xml 中添加 Thymeleaf 相关依赖项
 
-### 1、不同环境的 SpringBoot 配置
-
-将 application.properties 修改为 application.yml
-
-在resources目录下新建 application.yml 文件, 同时把 application.properties 从项目中移除。
-
-application.yml 中存放通用的配置信息，例如：
-
-    spring:
-      profiles:
-        active: dev
-      http:
-        encoding:
-          charset: UTF-8
+    <!-- Thymeleaf 核心组件 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
     
-      thymeleaf:
-        encoding: UTF-8
-    
-      mvc:
-        date-format: yyyy-MM-dd
-      jackson:
-        date-format: yyyy-MM-dd HH:mm:ss SSS
-        time-zone: GMT+8
+    <!-- Thymeleaf 模板语法支持 -->
+    <dependency>
+        <groupId>nz.net.ultraq.thymeleaf</groupId>
+        <artifactId>thymeleaf-layout-dialect</artifactId>
+        <version>2.4.1</version>
+    </dependency>
 
-另外添加其他的环境配置文件，例如这里添加两个环境变量配置项：
+### 2、添加全局外部变量
 
-用于测试环境的dev：application-dev.yml
-    
-    debug: true
-    server:
-      port: 8086
-      servlet:
-        context-path: /
-    spring:
-      thymeleaf:
-        cache: false
-      datasource:
-        username: root
-        password: root
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/test
-    
-    
-用于线上环境的prd：application-prd.yml
+在 resources 目录下添加 messages.properties 文件, 同时在启动器中声明加载
 
-    debug: false
-    server:
-      port: 80
-      servlet:
-        context-path: /
-        
-    spring:
-      thymeleaf:
-        cache: true
-    
-      datasource:
-        username: dbManger
-        password: passwordOfManager
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://0.0.0.0:3310/production
-    
-通过设置主文件 application.yml 中的 spring.profiles.active=dev 来指定使用的环境配置
-
-### 2、不同环境的日志文件配置
-
-使用 logback.xml 的方式配置日志文件时，SpringBoot不支持多环境日志文件输出配置，
-需要将 logback.xml 修改为 logback-spring.xml,同时将 logback.xml 从项目中移除。
-
-这里只是简单演示了不同环境的配置（仅修改了日志文件的存放目录）：
-
-logback-spring.xml 
-    
-    <?xml version="1.0" encoding="UTF-8"?>
-    <configuration debug="false" scan="true" scanPeriod="30 second">
-        
-        <!--
-            logback.xml 无法做到环境动态切换，
-            1、为了区分不同环境的日志环境配置，需要更改默认的logback.xml 为 logback-spring.xml
-            当SpringBoot检测到 logback-spring.xml 文件存在时，才会启用日志的环境配置功能
-            2、在需要切换的环境上增加 springProfile 属性
-        -->
-        <property name="PROJECT" value="myproject" />
-        <springProfile name="dev">
-            <property name="ROOT" value="logs/${PROJECT}-dev/" />
-        </springProfile>
-        <springProfile name="prd">
-            <property name="ROOT" value="logs/${PROJECT}-prd/" />
-        </springProfile>
-    
-    
-        <!--<property name="ROOT" value="logs/${PROJECT}/" />-->
-        <property name="FILESIZE" value="50MB" />
-        <property name="MAXHISTORY" value="100" />
-        <timestamp key="DATETIME" datePattern="yyyy-MM-dd HH:mm:ss" />
-        <!-- 控制台打印 -->
-        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-            <encoder charset="utf-8">
-                <pattern>[%-5level] %d{${DATETIME}} [%thread] %logger{36} - %m%n
-                </pattern>
-            </encoder>
-        </appender>
-        <!-- ERROR 输入到文件，按日期和文件大小 -->
-        <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <encoder charset="utf-8">
-                <pattern>[%-5level] %d{${DATETIME}} [%thread] %logger{36} - %m%n
-                </pattern>
-            </encoder>
-            <filter class="ch.qos.logback.classic.filter.LevelFilter">
-                <level>ERROR</level>
-                <onMatch>ACCEPT</onMatch>
-                <onMismatch>DENY</onMismatch>
-            </filter>
-            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>${ROOT}%d/error.%i.log</fileNamePattern>
-                <maxHistory>${MAXHISTORY}</maxHistory>
-                <timeBasedFileNamingAndTriggeringPolicy
-                        class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                    <maxFileSize>${FILESIZE}</maxFileSize>
-                </timeBasedFileNamingAndTriggeringPolicy>
-            </rollingPolicy>
-        </appender>
-    
-        <!-- WARN 输入到文件，按日期和文件大小 -->
-        <appender name="WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <encoder charset="utf-8">
-                <pattern>[%-5level] %d{${DATETIME}} [%thread] %logger{36} - %m%n
-                </pattern>
-            </encoder>
-            <filter class="ch.qos.logback.classic.filter.LevelFilter">
-                <level>WARN</level>
-                <onMatch>ACCEPT</onMatch>
-                <onMismatch>DENY</onMismatch>
-            </filter>
-            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>${ROOT}%d/warn.%i.log</fileNamePattern>
-                <maxHistory>${MAXHISTORY}</maxHistory>
-                <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                    <maxFileSize>${FILESIZE}</maxFileSize>
-                </timeBasedFileNamingAndTriggeringPolicy>
-            </rollingPolicy>
-        </appender>
-    
-        <!-- INFO 输入到文件，按日期和文件大小 -->
-        <appender name="INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <encoder charset="utf-8">
-                <pattern>[%-5level] %d{${DATETIME}} [%thread] %logger{36} - %m%n
-                </pattern>
-            </encoder>
-            <filter class="ch.qos.logback.classic.filter.LevelFilter">
-                <level>INFO</level>
-                <onMatch>ACCEPT</onMatch>
-                <onMismatch>DENY</onMismatch>
-            </filter>
-            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>${ROOT}%d/info.%i.log</fileNamePattern>
-                <maxHistory>${MAXHISTORY}</maxHistory>
-                <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                    <maxFileSize>${FILESIZE}</maxFileSize>
-                </timeBasedFileNamingAndTriggeringPolicy>
-            </rollingPolicy>
-        </appender>
-        <!-- DEBUG 输入到文件，按日期和文件大小 -->
-        <appender name="DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <encoder charset="utf-8">
-                <pattern>[%-5level] %d{${DATETIME}} [%thread] %logger{36} - %m%n
-                </pattern>
-            </encoder>
-            <filter class="ch.qos.logback.classic.filter.LevelFilter">
-                <level>DEBUG</level>
-                <onMatch>ACCEPT</onMatch>
-                <onMismatch>DENY</onMismatch>
-            </filter>
-            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>${ROOT}%d/debug.%i.log</fileNamePattern>
-                <maxHistory>${MAXHISTORY}</maxHistory>
-                <timeBasedFileNamingAndTriggeringPolicy
-                        class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                    <maxFileSize>${FILESIZE}</maxFileSize>
-                </timeBasedFileNamingAndTriggeringPolicy>
-            </rollingPolicy>
-        </appender>
-        <!-- TRACE 输入到文件，按日期和文件大小 -->
-        <appender name="TRACE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <encoder charset="utf-8">
-                <pattern>[%-5level] %d{${DATETIME}} [%thread] %logger{36} - %m%n
-                </pattern>
-            </encoder>
-            <filter class="ch.qos.logback.classic.filter.LevelFilter">
-                <level>TRACE</level>
-                <onMatch>ACCEPT</onMatch>
-                <onMismatch>DENY</onMismatch>
-            </filter>
-            <rollingPolicy
-                    class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>${ROOT}%d/trace.%i.log</fileNamePattern>
-                <maxHistory>${MAXHISTORY}</maxHistory>
-                <timeBasedFileNamingAndTriggeringPolicy
-                        class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                    <maxFileSize>${FILESIZE}</maxFileSize>
-                </timeBasedFileNamingAndTriggeringPolicy>
-            </rollingPolicy>
-        </appender>
-    
-        <!-- SQL相关日志输出-->
-        <logger name="org.apache.ibatis" level="INFO" additivity="false" />
-        <logger name="org.mybatis.spring" level="INFO" additivity="false" />
-        <logger name="com.github.miemiedev.mybatis.paginator" level="INFO" additivity="false" />
-    
-        <!-- Logger 根目录 -->
-        <root level="DEBUG">
-            <appender-ref ref="STDOUT" />
-            <appender-ref ref="DEBUG" />
-            <appender-ref ref="ERROR" />
-            <appender-ref ref="WARN" />
-            <appender-ref ref="INFO" />
-            <appender-ref ref="TRACE" />
-        </root>
-    </configuration>
-    
-上述文件中，通过配置 springProfile 节点来区分不同环境的日志文件配置（springProfile的名称需与application.yml 中的定义一致）
-
-    <springProfile name="dev">
-         <property name="ROOT" value="logs/${PROJECT}-dev/" />
-    </springProfile>
-    <springProfile name="prd">
-         <property name="ROOT" value="logs/${PROJECT}-prd/" />
-    </springProfile>   
-
-### 3、在 SpringBoot 中使用自定义环境变量配置
-
-SpringBoot 支持自定义环境变量，这里演示通过 config.properties 演示具体使用方式
-
-在resources目录下新建一个配置文件 config.properties
-
-config.properties:
+/src/main/resources/messages.properties
 
     # 自定义属性
-    app.name=SpringBoot2学习样例
+    app.name=SpringBoot2学习样例-Thymeleaf
     app.version=1.0.0
     app.description=这是SpringBoot2的学习样例的小DEMO
     app.page-size=20
     app.show-advert=true
     app.website=http://www.makinnet.cn
 
-为了让 SpringBoot 可以解析这些资源，需要在程序启动类中对配置文件进行声明。
+启动类 /src/main/java/cn.makinnet.springboot/MyApplication.class
 
-MyApplication启动文件:
-
+    
     @SpringBootApplication
-    //启动时加载 config.properties
-    @PropertySource("classpath:config.properties")
-    public class MyApplication {   
+    //启动时加载 messages.properties
+    @PropertySource("classpath:messages.properties")
+    public class MyApplication {
+    
         public static void main(String[] args) {
-            SpringApplication.run(MyApplication.class, args);         
+            // SpringApplication.run(MyApplication.class, args);
+            SpringApplication app = new SpringApplication(MyApplication.class);
+            // 关闭Banner
+            app.setBannerMode(Banner.Mode.OFF);
+    
+            app.run(args);
         }
+    
     }
 
-这样配置完成后，就可以通过IOC容器来使用自定义环境变量，例如在Controller中使用
+### 3、静态资源和页面模板
 
-HelloController:
+在  resources/static 存放静态资源文件
 
-    @Controller
-    public class HelloController {
-    
-        @Value("${app.name}")
-        private String appName;
-    
-        @Value("${app.website}")
-        private String website;
-    
-        @Value("${app.page-size}")
-        private Integer pageSize;
+在 resources/templates 目录下添加页面模板
+
+在thymeleaf的页面模板中，必须引入thymeleaf的命名空间:
+
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+    ...
+    </html>
+
+为了使用 thymeleaf 的模板继承功能，同时需要引入layout的命名空间
+
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org"
+          xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+    ...
+    </html>
+
+### 4、向页面模板传递数据
+
+    @RequestMapping("/")
+    public ModelAndView index(){
+
+        Map params = new LinkedHashMap();
+        params.put("key word", "all");
+        params.put("deptno", 10);
+
+        ModelAndView mav = new ModelAndView("index");
+        mav.addObject("params", params);
+        mav.addObject("users", users);
+        mav.addObject("depts", depts);
+        mav.addObject("config", appConfig);
+
+        return mav;
     }
-    
-除此之外，更建议的方式是通过配置 Bean 实体类来使用这些自定义变量。
 
-这里我们在项目中定义一个AppConfig.java类来存放这些数据    
-    
-AppConfig.java:
+### 5、页面模板中获取数据
 
-    @Component // 这个注解表示为组件类，SpringBoot启动时会加载
-    @ConfigurationProperties(prefix = "app") //将 app 开头的配置项自动赋值给bean属性
-    public class AppConfig {
-    
-        private String name;
-        private String version;
-        private String description;
-        private Integer pageSize;
-        private Boolean showAdvert;
-        private String website;
-    
-        public String getName() {
-            return name;
-        }
-    
-        public void setName(String name) {
-            this.name = name;
-        }
-    
-        public String getVersion() {
-            return version;
-        }
-    
-        public void setVersion(String version) {
-            this.version = version;
-        }
-    
-        public String getDescription() {
-            return description;
-        }
-    
-        public void setDescription(String description) {
-            this.description = description;
-        }
-    
-        public Integer getPageSize() {
-            return pageSize;
-        }
-    
-        public void setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-        }
-    
-        public Boolean getShowAdvert() {
-            return showAdvert;
-        }
-    
-        public void setShowAdvert(Boolean showAdvert) {
-            this.showAdvert = showAdvert;
-        }
-    
-        public String getWebsite() {
-            return website;
-        }
-    
-        public void setWebsite(String website) {
-            this.website = website;
-        }
-    }    
-    
-这样我们就可以通过IOC自动注入到实体类中了。
+thymeleaf 支持以 #{变量名} 的方式获取全局变量；
 
-    @Controller
-    public class HelloController {
-        
-        //@Autowired
-        @Resource
-        private AppConfig appConfig;
-        
-    }
-  
+而通过 controller 传递的局部变量 则用 ${变量名} 的方式获取.
+
+例如在页面中获取 2 中的全局变量：
+
+    <h1 class="m-0 text-dark" th:text="#{app.name}"></h1>
+
+获取 视图 传进来的参数：
     
+    <td th:text="${user.empno}"></td>
+    或
+    <td>[[${user.empno}]]</td>
+    以上两种方式都是对 td 标签的 text 赋值
     
+
+### 6、页面组件定义及引入
+
+在 thymeleaf 模板中我们可以对一些常用的页面组件进行封装，在需要的时候在页面中导入即可.
+
+resources/templates/components/_footer.html 页面组件的定义：
+
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org" style="height: auto;">
+    <head>
+        <meta charset="UTF-8">
+        <title>Thymeleaf页面模板组件</title>
+    </head>
+    <body>
+    
+    <!-- Control Sidebar -->
+    <footer class="main-footer" th:fragment="footer">
+        <strong>Copyright © 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 3.0.1
+        </div>
+    </footer>
+    <!-- /.control-sidebar -->
+    
+    </body>
+    </html>
+   
+在 templates/base.html 中引用组件:
+    
+    <!-- Main Footer -->
+    <div th:insert="components/_footer::footer"></div>
+    
+### 7、页面模板的定义及内容重载
+
+templates/base.html 模板定义：
+    
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org"
+          xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" style="height: auto;">
+    <head>
+    <meta ...>
+    <link ...>
+    <title layout:fragment="title">AdminLTE 3 | Dashboard 3</title>
+    <body>
+    ...
+    
+    <div class="container-fluid" layout:fragment="content-header">
+    ...
+    </div>
+    ...
+    <div class="container-fluid" layout:fragment="content">
+    ...
+    </div>
+    ...
+    <script...>
+    </body>
+    </html>
+    
+上述示例代码中定义了完整的 html 格式代码，并定义了三个可重载的模块：
+
+layout:fragment="title"
+
+layout:fragment="content-header"
+
+layout:fragment="content"
+
+我们在 index.html 中继承 base.html 模板, 并重载 title 模块的内容
+
+继承方式：通过定义 layout:decorator="模板名称(文件名不带扩展名)"
+
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org"
+          xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+          layout:decorator="base"><!-- layout文件路径-->
+          
+    <title layout:fragment="title">工作台 | 互联智控</title>
+
+    ...
+    </html>
+
+此时，index.html 不需再引入base.html中已有的css, js文件及body等html结构声明
+
+### 8、thymeleaf 语法
+
+① for 循环
+    
+    <tr th:each="user,stat:${users}"></tr>
+    
+    users 为迭代列表对象
+    user 为循环对象载体
+    stat 是循环索引对象, 对象结构为：{index = 0, count = 1, size = 15, current = item }
+    
+② if / unless 判断
+    
+    <td th:if="${user.job=='MANAGER'}">部门经理</td>
+    <td th:unless="${user.job=='MANAGER'}">其他职位</td>
+    
+    if 代表满足判断条件时生效，unless 表示判断条件不满足时生效
+
+③ switch 分支
+    
+    <td th:switch="${user.dname}">
+        <span th:case="RESEARCH">研发部</span>
+        <span th:case="ACCOUNTING">会计部</span>
+        <span th:case="SALES">销售部</span>
+        <span th:case="*">其他部门</span>
+    </td>
+    
+    th:swith 需配合 th:case 使用， case="*" 表示其他条件
+
+④ string格式化 
+
+    <td>[[${#strings.toLowerCase(user.ename)}]]</td>
+    
+    #strings 用法与 Java 中的 String 一致
+
+⑤ 日期格式化
+
+    <td th:text="${#dates.format(user.hiredate, 'yyyy年MM月dd日')}"></td>
+    
+    #dates 用法与 Java 中的 Date 一致
+    
+⑥ 货币格式化
+
+    <td>[[${#numbers.formatCurrency(user.sal)}]]</td>
+    
+    使用 #numbers.formatCurrency 进行本地货币格式化输出
+    
+⑦ 三目运算符
+
+    <td th:style="${user.sal>5000?'color:red;':''}">[[${#numbers.formatCurrency(user.sal)}]]</td>
+    
+    用法与 Java 中的三目运算符用法一致， 即: 判断条件?条件满足时:条件不满足时
+    
+ ### 9 thymeleaf 内置对象
+ 
+    ${param.keyword}
+    相当于 request.getParameter("keyword");
+    
+    此外还有，${request}, ${session}, ${application}
+    
+    但不推荐使用(request, session, application使用的是J2EE的原生对象, 
+                      SpringBoot2.0以后的版本会逐渐弱化，改为自身的对象)
+    
+          
+    
+
+
+
+

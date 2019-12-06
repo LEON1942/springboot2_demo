@@ -21,7 +21,7 @@ public class HelloController {
     private List<Department> depts = new ArrayList<Department>();
 
     public HelloController(){
-        users.add(new User(7001, "LEON", "MANAGER", 7002, "1990-07-23", 8403.00, null, 10, "ACCOUNTING"));
+        users.add(new User(7001, "LEON", "MANAGER", 7002, "1990-07-23", 8403.00, 8240.0f, 10, "ACCOUNTING"));
         users.add(new User(7002, "JOHN", "PRESIDENT", null, "1990-07-23", 29232.00, null, 10, "ACCOUNTING"));
         users.add(new User(7003, "SMITH", "CLARK", 7002, "1990-07-23", 4454.00, null, 10, "ACCOUNTING"));
         users.add(new User(7004, "JANY", "CLARK", 7007, "1990-07-23", 2437.00, null, 20, "RESEARCH"));

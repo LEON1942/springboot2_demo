@@ -11,7 +11,7 @@ import javax.swing.*;
 
 
 @SpringBootApplication
-//启动时加载 config.properties
+//启动时加载 messages.properties
 @PropertySource("classpath:messages.properties")
 public class MyApplication {
 
