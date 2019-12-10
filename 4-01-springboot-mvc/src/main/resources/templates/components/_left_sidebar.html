@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" style="height: auto;">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf页面模板组件</title>
+</head>
+<body>
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" th:fragment="leftSidebar">
+    <!-- Brand Logo -->
+    <a href="/" class="brand-link">
+        <img src="/favicon.ico" alt="http://www.makinnet.cn"
+             class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">广州互联智控</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="/users/leon.jpeg" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">LEON1942</a>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+
+                <li class="nav-header">常用菜单</li>
+                <li class="nav-item">
+                    <a href="pages/widgets.html" class="nav-link">
+                        <i class="nav-icon fa fa-th"></i>
+                        <p>
+                            客服窗口
+                            <span class="right badge badge-danger">New</span>
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa  fa-copy"></i>
+                        <p>
+                            订单管理
+                            <i class="fa fa-angle-left right"></i>
+                            <span class="badge badge-info right">6</span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/layout/top-nav.html" class="nav-link">
+                                <i class="fa fa-list-alt nav-icon"></i>
+                                <p>订单列表</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                <i class="fa fa-credit-card nav-icon"></i>
+                                <p>退款处理</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa  fa-edit"></i>
+                        <p>
+                            商品管理
+                            <i class="fa  fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/forms/general.html" class="nav-link">
+                                <i class="fa fa-table nav-icon"></i>
+                                <p>商品列表</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/forms/advanced.html" class="nav-link">
+                                <i class="fa fa-th-large nav-icon"></i>
+                                <p>商品类别</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/forms/editors.html" class="nav-link">
+                                <i class="fa fa-database nav-icon"></i>
+                                <p>物料管理</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/forms/editors.html" class="nav-link">
+                                <i class="fa fa-suitcase nav-icon"></i>
+                                <p>销售商品</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa  fa-tree"></i>
+                        <p>
+                            网站管理
+                            <i class="fa  fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/UI/general.html" class="nav-link">
+                                <i class="fa fa-image nav-icon"></i>
+                                <p>广告横幅</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/icons.html" class="nav-link">
+                                <i class="fa fa-newspaper-o nav-icon"></i>
+                                <p>新闻管理</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/buttons.html" class="nav-link">
+                                <i class="fa fa-university nav-icon"></i>
+                                <p>行政区域</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/sliders.html" class="nav-link">
+                                <i class="fa fa-font nav-icon"></i>
+                                <p>印章字体</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/UI/modals.html" class="nav-link">
+                                <i class="fa fa-universal-access nav-icon"></i>
+                                <p>印章底图</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-bar-chart"></i>
+                        <p>
+                            分析报表
+                            <i class="right fa  fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/charts/chartjs.html" class="nav-link">
+                                <i class="fa fa-line-chart nav-icon"></i>
+                                <p>订单量</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/charts/flot.html" class="nav-link">
+                                <i class="fa fa-money nav-icon"></i>
+                                <p>销售额</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa  fa-lock"></i>
+                        <p>
+                            用户权限
+                            <i class="fa  fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/widgets.html" class="nav-link">
+                                <i class="nav-icon fa fa-user"></i>
+                                <p>
+                                    用户管理
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/tables/simple.html" class="nav-link">
+                                <i class="fa fa-sitemap nav-icon"></i>
+                                <p>权限列表</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/tables/data.html" class="nav-link">
+                                <i class="fa fa-plus-square nav-icon"></i>
+                                <p>添加权限</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/tables/jsgrid.html" class="nav-link">
+                                <i class="fa fa-user nav-icon"></i>
+                                <p>角色管理</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/tables/jsgrid.html" class="nav-link">
+                                <i class="fa fa-user-plus nav-icon"></i>
+                                <p>添加角色</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/tables/jsgrid.html" class="nav-link">
+                                <i class="fa fa-unlock-alt nav-icon"></i>
+                                <p>用户权限</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-header">其他菜单</li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-weixin"></i>
+                        <p>
+                            微信管理
+                            <i class="fa fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/mailbox/mailbox.html" class="nav-link">
+                                <i class="fa fa-text-height nav-icon"></i>
+                                <p>TOKEN</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/compose.html" class="nav-link">
+                                <i class="fa fa-list nav-icon"></i>
+                                <p>菜单管理</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                <i class="fa fa-user nav-icon"></i>
+                                <p>用户管理</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                <i class="fa fa-jpy nav-icon"></i>
+                                <p>支付管理</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-terminal"></i>
+                        <p>
+                            开发管理
+                            <i class="fa fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/examples/invoice.html" class="nav-link">
+                                <i class="fa fa-user-circle-o nav-icon"></i>
+                                <p>账户列表</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-registered"></i>
+                        <p>
+                            商户管理
+                            <i class="fa  fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/examples/invoice.html" class="nav-link">
+                                <i class="fa fa-server nav-icon"></i>
+                                <p>商户列表</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-truck"></i>
+                        <p>
+                            快递管理
+                            <i class="fa fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/examples/invoice.html" class="nav-link">
+                                <i class="fa fa-list nav-icon"></i>
+                                <p>账号列表</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/invoice.html" class="nav-link">
+                                <i class="fa fa-wpforms nav-icon"></i>
+                                <p>运费模板</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-plus-square"></i>
+                        <p>
+                            其他菜单
+                            <i class="fa  fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="pages/examples/login.html" class="nav-link">
+                                <i class="fa fa-circle nav-icon"></i>
+                                <p>业务模块</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/register.html" class="nav-link">
+                                <i class="fa fa-circle nav-icon"></i>
+                                <p>推广活动</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/examples/forgot-password.html" class="nav-link">
+                                <i class="fa fa-circle nav-icon"></i>
+                                <p>访问记录</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+</body>
+</html>

@@ -1,0 +1,10 @@
+debug: true
+server:
+  port: 8086
+  servlet:
+    context-path: /
+spring:
+  thymeleaf:
+    cache: false
+
+
