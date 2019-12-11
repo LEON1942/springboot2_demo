@@ -1,0 +1,324 @@
+[INFO ] 2019-12-11 21:01:42 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 7580 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 21:01:42 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 21:01:42 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 21:01:42 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 21:01:42 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 21:01:42 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 21:01:42 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 21:01:42 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1562 ms
+[INFO ] 2019-12-11 21:01:42 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 21:01:42 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 21:01:42 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 21:01:42 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 21:01:42 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.134 seconds (JVM running for 6.327)
+[INFO ] 2019-12-11 21:01:42 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 21:01:42 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 21:01:42 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2019-12-11 21:21:00 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 13672 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 21:21:00 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 21:21:00 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 21:21:00 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 21:21:00 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 21:21:00 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 21:21:00 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 21:21:00 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1645 ms
+[INFO ] 2019-12-11 21:21:00 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 21:21:00 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 21:21:00 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 21:21:00 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 21:21:00 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.291 seconds (JVM running for 5.63)
+[INFO ] 2019-12-11 21:21:00 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 21:21:00 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 21:21:00 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+[INFO ] 2019-12-11 21:25:12 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 10004 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 21:25:12 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 21:25:12 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 21:25:12 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 21:25:12 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 21:25:12 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 21:25:12 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 21:25:12 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1946 ms
+[INFO ] 2019-12-11 21:25:12 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 21:25:12 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 21:25:12 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 21:25:12 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 21:25:12 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.982 seconds (JVM running for 6.83)
+[INFO ] 2019-12-11 21:25:12 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 21:25:12 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 21:25:12 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+[INFO ] 2019-12-11 21:29:18 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 7720 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 21:29:18 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 21:29:18 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 21:29:18 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 21:29:18 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 21:29:18 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 21:29:18 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 21:29:18 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1980 ms
+[INFO ] 2019-12-11 21:29:18 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 21:29:18 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 21:29:18 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 21:29:18 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 21:29:18 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.662 seconds (JVM running for 6.88)
+[INFO ] 2019-12-11 21:29:18 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 21:29:18 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 21:29:18 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+[INFO ] 2019-12-11 22:17:56 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 11116 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 22:17:56 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 22:17:56 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 22:17:56 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 22:17:56 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 22:17:56 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 22:17:56 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 22:17:56 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1136 ms
+[INFO ] 2019-12-11 22:17:56 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 22:17:56 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 22:17:56 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 22:17:56 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 22:17:56 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 3.464 seconds (JVM running for 4.956)
+[INFO ] 2019-12-11 22:17:56 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 22:17:56 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 22:17:56 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+[INFO ] 2019-12-11 22:32:37 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 10432 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 22:32:37 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 22:32:37 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 22:32:37 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 22:32:37 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 22:32:37 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 22:32:37 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 22:32:37 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1028 ms
+[INFO ] 2019-12-11 22:32:37 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 22:32:37 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 22:32:37 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 22:32:37 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 22:32:37 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 3.349 seconds (JVM running for 4.619)
+[INFO ] 2019-12-11 23:00:29 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 13240 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:00:29 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:00:29 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:00:29 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:00:29 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:00:29 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:00:29 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:00:29 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1507 ms
+[INFO ] 2019-12-11 23:00:29 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:00:29 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:00:29 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:00:29 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:00:29 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.17 seconds (JVM running for 7.331)
+[INFO ] 2019-12-11 23:00:29 [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:00:29 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:00:29 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+[INFO ] 2019-12-11 23:01:26 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 5964 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:01:26 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:01:26 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:01:26 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:01:26 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:01:26 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:01:26 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:01:26 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1347 ms
+[INFO ] 2019-12-11 23:01:26 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:01:26 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:01:26 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:01:26 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:01:26 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.533 seconds (JVM running for 8.094)
+[INFO ] 2019-12-11 23:01:26 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:01:26 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:01:26 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+[INFO ] 2019-12-11 23:09:15 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 13508 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:09:15 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:09:15 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:09:15 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:09:15 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:09:15 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:09:15 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:09:15 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1419 ms
+[INFO ] 2019-12-11 23:09:15 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:09:15 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:09:15 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:09:15 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:09:15 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 3.521 seconds (JVM running for 4.975)
+[INFO ] 2019-12-11 23:09:15 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:09:15 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:09:15 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+[INFO ] 2019-12-11 23:12:05 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 8224 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:12:05 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:12:05 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:12:05 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:12:05 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:12:05 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:12:05 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:12:05 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1326 ms
+[INFO ] 2019-12-11 23:12:05 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:12:05 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:12:05 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:12:05 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:12:05 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.036 seconds (JVM running for 5.665)
+[INFO ] 2019-12-11 23:12:24 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 5460 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:12:24 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:12:24 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:12:24 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:12:24 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:12:24 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:12:24 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:12:24 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1041 ms
+[INFO ] 2019-12-11 23:12:24 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:12:24 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:12:24 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:12:24 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:12:24 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 3.443 seconds (JVM running for 4.82)
+[INFO ] 2019-12-11 23:12:24 [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:12:24 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:12:24 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2019-12-11 23:16:16 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 12532 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:16:16 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:16:16 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:16:16 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:16:16 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:16:16 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:16:16 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:16:16 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1135 ms
+[INFO ] 2019-12-11 23:16:16 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:16:16 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:16:16 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:16:16 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:16:16 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 3.275 seconds (JVM running for 4.593)
+[INFO ] 2019-12-11 23:16:16 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:16:16 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:16:16 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2019-12-11 23:16:45 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 560 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:16:45 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:16:45 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:16:45 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:16:45 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:16:45 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:16:45 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:16:45 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1156 ms
+[INFO ] 2019-12-11 23:16:45 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:16:45 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:16:45 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:16:45 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:16:45 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 3.146 seconds (JVM running for 4.987)
+[INFO ] 2019-12-11 23:16:45 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:16:45 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:16:45 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2019-12-11 23:17:55 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 13088 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:17:55 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:17:55 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:17:55 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:17:55 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:17:55 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:17:55 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:17:55 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1018 ms
+[INFO ] 2019-12-11 23:17:55 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:17:55 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:17:55 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:17:55 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:17:55 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 2.993 seconds (JVM running for 4.401)
+[INFO ] 2019-12-11 23:17:55 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:17:55 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:17:55 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2019-12-11 23:22:37 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 7348 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:22:37 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:22:37 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:22:37 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:22:37 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:22:37 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:22:37 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:22:37 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1096 ms
+[INFO ] 2019-12-11 23:22:37 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:22:37 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:22:37 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:22:37 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:22:37 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 3.79 seconds (JVM running for 5.195)
+[INFO ] 2019-12-11 23:23:03 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 9392 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:23:03 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:23:03 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:23:03 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:23:03 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:23:03 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:23:03 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:23:03 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1034 ms
+[INFO ] 2019-12-11 23:23:03 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:23:03 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:23:03 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:23:03 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:23:03 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 3.263 seconds (JVM running for 5.294)
+[INFO ] 2019-12-11 23:23:03 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:23:03 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:23:03 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 2019-12-11 23:24:40 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 11664 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:24:40 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:24:40 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:24:40 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:24:40 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:24:40 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:24:40 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:24:40 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1644 ms
+[INFO ] 2019-12-11 23:24:40 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:24:40 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:24:40 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:24:40 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:24:40 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.484 seconds (JVM running for 6.151)
+[INFO ] 2019-12-11 23:24:40 [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:24:40 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:24:40 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+[INFO ] 2019-12-11 23:35:56 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 8456 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:35:56 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:35:56 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:35:56 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:35:56 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:35:56 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:35:56 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:35:56 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1745 ms
+[INFO ] 2019-12-11 23:35:56 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:35:56 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:35:56 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:35:56 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:35:56 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.229 seconds (JVM running for 5.936)
+[INFO ] 2019-12-11 23:35:56 [http-nio-8086-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:35:56 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:35:56 [http-nio-8086-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+[INFO ] 2019-12-11 23:40:57 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 1332 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:40:57 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:40:57 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:40:57 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:40:57 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:40:57 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:40:57 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:40:57 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1521 ms
+[INFO ] 2019-12-11 23:40:57 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:40:57 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:40:57 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:40:57 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:40:57 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.329 seconds (JVM running for 6.017)
+[INFO ] 2019-12-11 23:40:57 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:40:57 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:40:57 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+[INFO ] 2019-12-11 23:44:58 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 6948 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:44:58 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:44:58 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:44:58 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:44:58 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:44:58 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:44:58 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:44:58 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2222 ms
+[INFO ] 2019-12-11 23:44:58 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:44:58 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:44:58 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:44:58 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:44:58 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 5.761 seconds (JVM running for 7.707)
+[INFO ] 2019-12-11 23:45:18 [main] cn.makinnet.springboot.MyApplication - Starting MyApplication on DESKTOP-41HG10D with PID 8172 (D:\java\Applications\springboot2_demo\4-01-springboot-mvc\target\classes started by Administrator in D:\java\Applications\springboot2_demo\4-01-springboot-mvc)
+[INFO ] 2019-12-11 23:45:18 [main] cn.makinnet.springboot.MyApplication - The following profiles are active: dev
+[INFO ] 2019-12-11 23:45:18 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8086 (http)
+[INFO ] 2019-12-11 23:45:18 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:45:18 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 2019-12-11 23:45:18 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO ] 2019-12-11 23:45:18 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2019-12-11 23:45:18 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1396 ms
+[INFO ] 2019-12-11 23:45:18 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 2019-12-11 23:45:18 [main] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 2019-12-11 23:45:18 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8086"]
+[INFO ] 2019-12-11 23:45:18 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8086 (http) with context path ''
+[INFO ] 2019-12-11 23:45:18 [main] cn.makinnet.springboot.MyApplication - Started MyApplication in 4.089 seconds (JVM running for 5.797)
+[INFO ] 2019-12-11 23:45:18 [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:45:18 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2019-12-11 23:45:18 [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms

@@ -22,6 +22,10 @@ public class User {
     private Integer deptno;
     // 部门名称
     private String dname;
+    // 邮箱
+    private String email;
+    // 密码
+    private String password;
 
     public User(Integer empno, String ename, String job, Integer mgr, String hiredate, Double sal, Float comm, Integer deptno, String dname) {
         this.empno = empno;
@@ -105,5 +109,21 @@ public class User {
 
     public void setDname(String dname) {
         this.dname = dname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

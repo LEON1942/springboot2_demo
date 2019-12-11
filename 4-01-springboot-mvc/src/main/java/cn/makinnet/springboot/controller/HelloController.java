@@ -5,10 +5,14 @@ import cn.makinnet.springboot.entity.Department;
 import cn.makinnet.springboot.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 @Controller
@@ -19,6 +23,8 @@ public class HelloController {
 
     private List<User> users = new ArrayList<User>();
     private List<Department> depts = new ArrayList<Department>();
+
+    private User loginUser = null;
 
     public HelloController(){
         users.add(new User(7001, "LEON", "MANAGER", 7002, "1990-07-23", 8403.00, 8240.0f, 10, "ACCOUNTING"));
@@ -44,14 +50,43 @@ public class HelloController {
 
     }
 
+    @RequestMapping("/login")
+    public ModelAndView login(HttpServletRequest request){
+
+        ModelAndView mav = new ModelAndView();
+
+        if(request.getMethod().equalsIgnoreCase("POST")){
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+            String remember = request.getParameter("remember");
+
+            if(email.equalsIgnoreCase("leon@hotmail.com") && password.equalsIgnoreCase("123")){
+                User user = new User(7001, "LEON", "MANAGER", 7002, "1990-07-23", 8403.00, 8240.0f, 10, "ACCOUNTING");
+                user.setEmail(email);
+                user.setPassword(password);
+                this.loginUser = user;
+                mav.setViewName("redirect:/");
+                return mav;
+            }
+        }
+
+        mav.setViewName("login");
+        return mav;
+    }
+
     @RequestMapping("/")
     public ModelAndView index(){
-
+        ModelAndView mav = new ModelAndView();
+        if(null == loginUser){
+            mav.setViewName("redirect:/login");
+            return mav;
+        }
+        mav.setViewName("index");
         Map params = new LinkedHashMap();
         params.put("key word", "all");
         params.put("deptno", 10);
 
-        ModelAndView mav = new ModelAndView("index");
+
         mav.addObject("params", params);
         mav.addObject("users", users);
         mav.addObject("depts", depts);
