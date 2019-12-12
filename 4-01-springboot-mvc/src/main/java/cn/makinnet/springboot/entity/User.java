@@ -27,7 +27,7 @@ public class User {
     // 密码
     private String password;
 
-    public User(Integer empno, String ename, String job, Integer mgr, String hiredate, Double sal, Float comm, Integer deptno, String dname) {
+    public User(Integer empno, String ename, String job, Integer mgr, String hiredate, Double sal, Float comm, Integer deptno, String dname, String password) {
         this.empno = empno;
         this.ename = ename;
         this.job = job;
@@ -37,6 +37,7 @@ public class User {
         this.comm = comm;
         this.deptno = deptno;
         this.dname = dname;
+        this.password = password;
     }
 
     public Integer getEmpno() {

@@ -69,7 +69,7 @@
                                         <tr th:each="user,stat:${users}">
                                             <td th:text="${ stat.count }"></td>
                                             <td>[[${user.empno}]]</td>
-                                            <td>[[${#strings.toLowerCase(user.ename)}]]</td>
+                                            <td>[[${#strings.toUpperCase(user.ename)}]]</td>
                                             <td th:switch="${user.dname}">
                                                 <span th:case="RESEARCH">研发部</span>
                                                 <span th:case="ACCOUNTING">会计部</span>
