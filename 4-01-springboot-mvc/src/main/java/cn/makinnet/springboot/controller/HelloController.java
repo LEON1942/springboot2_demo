@@ -3,16 +3,16 @@ package cn.makinnet.springboot.controller;
 import cn.makinnet.springboot.AppConfig;
 import cn.makinnet.springboot.entity.Department;
 import cn.makinnet.springboot.entity.User;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -52,9 +52,19 @@ public class HelloController {
     }
 
     @RequestMapping("/login")
-    public ModelAndView login(HttpServletRequest request){
+    public ModelAndView login(HttpServletRequest request, HttpServletResponse response){
 
         ModelAndView mav = new ModelAndView();
+        String loginUserEmail = "";
+        Cookie[] cookies =  request.getCookies();
+        if(cookies != null){
+            for(Cookie cookie : cookies){
+                if(cookie.getName().equals("loginUserEmail")){
+                    loginUserEmail = cookie.getValue();
+                }
+            }
+        }
+        mav.addObject("email", loginUserEmail);
 
         if(request.getMethod().equalsIgnoreCase("POST")){
             String email = request.getParameter("email");
@@ -64,22 +74,28 @@ public class HelloController {
             for (User user:users) {
                 if(email.equals(user.getEmail()) && password.equals(user.getPassword())){
                     loginUser = user;
+                    if(null!=remember && remember.equalsIgnoreCase("on")){
+                        Cookie cookie=new Cookie("loginUserEmail",user.getEmail());
+                        response.addCookie(cookie);
+                    }else{
+                        if(!loginUserEmail.isEmpty()){
+
+                        }
+                    }
                     mav.setViewName("redirect:/");
                     return mav;
                 }
             }
-
-//            if(email.equalsIgnoreCase("leon@hotmail.com") && password.equalsIgnoreCase("123")){
-//                User user = new User(7001, "LEON", "MANAGER", 7002, "1990-07-23", 8403.00, 8240.0f, 10, "ACCOUNTING", "123");
-//                user.setEmail(email);
-//                user.setPassword(password);
-//                this.loginUser = user;
-//                mav.setViewName("redirect:/");
-//                return mav;
-//            }
         }
-
         mav.setViewName("login");
+        return mav;
+    }
+
+    @GetMapping("/logout")
+    public ModelAndView logout(){
+        ModelAndView mav = new ModelAndView();
+        this.loginUser = null;
+        mav.setViewName("redirect:/");
         return mav;
     }
 

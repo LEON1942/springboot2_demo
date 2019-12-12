@@ -8,6 +8,7 @@ spring:
 
   thymeleaf:
     encoding: UTF-8
+    cache: false
 
   mvc:
     date-format: yyyy-MM-dd

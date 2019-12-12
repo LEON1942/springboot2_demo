@@ -72,6 +72,10 @@ pom.xml 相关配置
 
 ### 9、 启动时加载 Listener
 
+    SpringBoot + Redis + Cookie 管理登录信息例子
+    https://www.cnblogs.com/liuxiaoming123/p/7997509.html
+
+    
  
 
 
