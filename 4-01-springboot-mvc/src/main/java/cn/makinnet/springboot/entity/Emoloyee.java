@@ -1,8 +1,10 @@
 package cn.makinnet.springboot.entity;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class User {
+public class Emoloyee {
 
     // 员工编号
     private Integer empno;
@@ -13,7 +15,7 @@ public class User {
     //
     private Integer mgr;
     // 入职时间
-    private String hiredate;
+    private Date hiredate;
     // 薪资
     private Double sal;
     // 奖金
@@ -27,12 +29,17 @@ public class User {
     // 密码
     private String password;
 
-    public User(Integer empno, String ename, String job, Integer mgr, String hiredate, Double sal, Float comm, Integer deptno, String dname, String password) {
+    public Emoloyee(Integer empno, String ename, String job, Integer mgr, String hiredate, Double sal, Float comm, Integer deptno, String dname, String password){
         this.empno = empno;
         this.ename = ename;
         this.job = job;
         this.mgr = mgr;
-        this.hiredate = hiredate;
+        try {
+            this.hiredate = new SimpleDateFormat("yyyy-MM-dd").parse(hiredate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            this.hiredate = new Date();
+        }
         this.sal = sal;
         this.comm = comm;
         this.deptno = deptno;
@@ -73,10 +80,11 @@ public class User {
     }
 
     public String getHiredate() {
-        return hiredate;
+
+        return new SimpleDateFormat("yyyy-MM-dd").format(hiredate) ;
     }
 
-    public void setHiredate(String hiredate) {
+    public void setHiredate(Date hiredate) {
         this.hiredate = hiredate;
     }
 
