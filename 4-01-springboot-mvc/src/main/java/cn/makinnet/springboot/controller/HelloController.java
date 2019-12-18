@@ -28,21 +28,21 @@ public class HelloController {
     private Emoloyee loginUser = null;
 
     public HelloController(){
-        users.add(new Emoloyee(7001, "LEON", "MANAGER", 7002, "1990-07-23", 8403.00, 8240.0f, 10, "ACCOUNTING", "123"));
-        users.add(new Emoloyee(7002, "JOHN", "PRESIDENT", null, "1990-07-23", 29232.00, null, 10, "ACCOUNTING", "123"));
-        users.add(new Emoloyee(7003, "Smith", "CLARK", 7002, "1990-07-23", 4454.00, null, 10, "ACCOUNTING", "123"));
-        users.add(new Emoloyee(7004, "JANY", "CLARK", 7007, "1990-07-23", 2437.00, null, 20, "RESEARCH", "123"));
-        users.add(new Emoloyee(7005, "Alia", "ANALYST", 7007, "1990-07-23", 4483.00, null, 20, "RESEARCH", "123"));
-        users.add(new Emoloyee(7006, "SNOW", "CLARK", 7007, "1990-07-23", 4469.00, null, 20, "RESEARCH", "123"));
-        users.add(new Emoloyee(7007, "SAM", "MANAGER", null, "1990-07-23", 6476.00, null, 20, "RESEARCH", "123"));
-        users.add(new Emoloyee(7008, "Danny", "CLARK", 7007, "1990-07-23", 7303.00, null, 20, "RESEARCH", "123"));
-        users.add(new Emoloyee(7009, "AMY", "MANAGER", 7007, "1990-07-23", 7473.00, null, 20, "RESEARCH", "123"));
-        users.add(new Emoloyee(7010, "ALICE", "ANALYST", 7015, "1990-07-23", 8203.00, null, 30, "SALES", "123"));
-        users.add(new Emoloyee(7011, "DRAGON", "CLARK", 7015, "1990-07-23", 8903.00, null, 30, "SALES", "123"));
-        users.add(new Emoloyee(7012, "Channel", "CLARK", 7015, "1990-07-23", 9245.60, null, 30, "SALES", "123"));
-        users.add(new Emoloyee(7013, "Wedding", "SALESMAN", 7015, "1990-07-23", 7649.40, null, 30, "SALES", "123"));
-        users.add(new Emoloyee(7014, "Martin", "SALESMAN", 7015, "1990-07-23", 5432.50, null, 30, "SALES", "123"));
-        users.add(new Emoloyee(7015, "LORD", "MANAGER", null, "1990-07-23", 6403.00, null, 30, "SALES", "123"));
+        users.add(new Emoloyee(7001, "LEON", "MANAGER", 7002, "1990-07-23", 8403.00, 8240.0f, 10, "ACCOUNTING", "123", "leon@test.com"));
+        users.add(new Emoloyee(7002, "JOHN", "PRESIDENT", null, "1990-07-23", 29232.00, null, 10, "ACCOUNTING", "123", "a@test.com"));
+        users.add(new Emoloyee(7003, "Smith", "CLARK", 7002, "1990-07-23", 4454.00, null, 10, "ACCOUNTING", "123", "b@test.com"));
+        users.add(new Emoloyee(7004, "JANY", "CLARK", 7007, "1990-07-23", 2437.00, null, 20, "RESEARCH", "123", "c@test.com"));
+        users.add(new Emoloyee(7005, "Alia", "ANALYST", 7007, "1990-07-23", 4483.00, null, 20, "RESEARCH", "123", "d@test.com"));
+        users.add(new Emoloyee(7006, "SNOW", "CLARK", 7007, "1990-07-23", 4469.00, null, 20, "RESEARCH", "123", "e@test.com"));
+        users.add(new Emoloyee(7007, "SAM", "MANAGER", null, "1990-07-23", 6476.00, null, 20, "RESEARCH", "123", "f@test.com"));
+        users.add(new Emoloyee(7008, "Danny", "CLARK", 7007, "1990-07-23", 7303.00, null, 20, "RESEARCH", "123", "g@test.com"));
+        users.add(new Emoloyee(7009, "AMY", "MANAGER", 7007, "1990-07-23", 7473.00, null, 20, "RESEARCH", "123", "h@test.com"));
+        users.add(new Emoloyee(7010, "ALICE", "ANALYST", 7015, "1990-07-23", 8203.00, null, 30, "SALES", "123", "i@test.com"));
+        users.add(new Emoloyee(7011, "DRAGON", "CLARK", 7015, "1990-07-23", 8903.00, null, 30, "SALES", "123", "j@test.com"));
+        users.add(new Emoloyee(7012, "Channel", "CLARK", 7015, "1990-07-23", 9245.60, null, 30, "SALES", "123", "k@test.com"));
+        users.add(new Emoloyee(7013, "Wedding", "SALESMAN", 7015, "1990-07-23", 7649.40, null, 30, "SALES", "123", "l@test.com"));
+        users.add(new Emoloyee(7014, "Martin", "SALESMAN", 7015, "1990-07-23", 5432.50, null, 30, "SALES", "123", "m@test.com"));
+        users.add(new Emoloyee(7015, "LORD", "MANAGER", null, "1990-07-23", 6403.00, null, 30, "SALES", "123", "n@test.com"));
 
         depts.add(new Department(10, "ACCOUNTING", "GUANG ZHOU"));
         depts.add(new Department(20, "RESEARCH", "SHANG HAI"));
@@ -55,7 +55,7 @@ public class HelloController {
     public ModelAndView login(HttpServletRequest request, HttpServletResponse response){
 
         ModelAndView mav = new ModelAndView();
-        String loginUserEmail = "";
+        String loginUserEmail = null;
         Cookie[] cookies =  request.getCookies();
         if(cookies != null){
             for(Cookie cookie : cookies){
@@ -78,8 +78,11 @@ public class HelloController {
                         Cookie cookie=new Cookie("loginUserEmail",user.getEmail());
                         response.addCookie(cookie);
                     }else{
-                        if(!loginUserEmail.isEmpty()){
-
+                        if(loginUserEmail!=null){
+                            Cookie cookie=new Cookie("loginUserEmail",null);
+                            cookie.setMaxAge(0);
+                            cookie.setPath("/");
+                            response.addCookie(cookie);
                         }
                     }
                     mav.setViewName("redirect:/");
@@ -118,7 +121,7 @@ public class HelloController {
                 checkPass = false;
             }
             if(checkPass) {
-                Emoloyee user = new Emoloyee(7001, username, "MANAGER", 7002, new SimpleDateFormat("yyyy-MM-dd").format(new Date()), 8403.00, 8240.0f, 10, "ACCOUNTING", password);
+                Emoloyee user = new Emoloyee(7001, username, "MANAGER", 7002, new SimpleDateFormat("yyyy-MM-dd").format(new Date()), 8403.00, 8240.0f, 10, "ACCOUNTING", password, username+"@test.com");
                 user.setEmail(email);
                 users.add(user);
                 mav.setViewName("redirect:/");

@@ -32,7 +32,7 @@
 
             <form action="" method="post">
                 <div class="input-group mb-3">
-                    <input name="email" class="form-control" th:value="${email}" placeholder="请输入您的邮箱">
+                    <input name="email" class="form-control" th:value="${email==null?'leon@test.com':email}" placeholder="请输入您的邮箱">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>

@@ -29,7 +29,7 @@ public class Emoloyee {
     // 密码
     private String password;
 
-    public Emoloyee(Integer empno, String ename, String job, Integer mgr, String hiredate, Double sal, Float comm, Integer deptno, String dname, String password){
+    public Emoloyee(Integer empno, String ename, String job, Integer mgr, String hiredate, Double sal, Float comm, Integer deptno, String dname, String password, String email){
         this.empno = empno;
         this.ename = ename;
         this.job = job;
@@ -45,6 +45,7 @@ public class Emoloyee {
         this.deptno = deptno;
         this.dname = dname;
         this.password = password;
+        this.email = email;
     }
 
     public Integer getEmpno() {

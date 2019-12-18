@@ -19,6 +19,9 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="/adminlte/dist/css/google-font.css" rel="stylesheet">
 
+  <style>
+      .custom-file-label::after {content: "浏览";}
+  </style>
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">
@@ -63,6 +66,14 @@
             </div>
           </div>
         </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="custom-file">
+              <input type="file" data-browse="选择" class="custom-file-input" id="exampleInputFile">
+              <label class="custom-file-label" for="exampleInputFile">点击上传头像</label>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
@@ -92,7 +103,7 @@
         </a>
       </div>
 
-      <a href="/login" class="text-center">我已有账号</a>
+      <a href="/login" class="text-center">我已有账号,点击登录</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
@@ -105,6 +116,7 @@
 <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/adminlte/dist/js/adminlte.min.js"></script>
+<script src="/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 
 <script>
 
@@ -155,6 +167,10 @@
   }
 
 </script>
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        bsCustomFileInput.init();
+    });
+</script>
 </body>
 </html>
