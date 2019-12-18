@@ -5,14 +5,19 @@ import cn.makinnet.springboot.entity.Department;
 import cn.makinnet.springboot.entity.Emoloyee;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -26,6 +31,9 @@ public class HelloController {
     private List<Department> depts = new ArrayList<Department>();
 
     private Emoloyee loginUser = null;
+
+    @Value("${app.upload.location}")
+    private String uploadPath;
 
     public HelloController(){
         users.add(new Emoloyee(7001, "LEON", "MANAGER", 7002, "1990-07-23", 8403.00, 8240.0f, 10, "ACCOUNTING", "123", "leon@test.com"));
@@ -51,6 +59,10 @@ public class HelloController {
 
     }
 
+    // WebRequest 是对 request 对象的包装
+    // 两者都是与J2EE容器强耦合，为了将来扩展需要，不推荐使用request对象传递参数，而使用ModelAndView对象来实现
+    // request.setAttribute(key, value) 是向当前请求中放入对象，这种方式与WEB容器强耦合
+    // ModelAndView.addObject(key, value)是向mav实例中放入对象，这种方式与WEB容器非强耦合
     @RequestMapping("/login")
     public ModelAndView login(HttpServletRequest request, HttpServletResponse response){
 
@@ -106,28 +118,50 @@ public class HelloController {
     public ModelAndView register(HttpServletRequest request){
         ModelAndView mav = new ModelAndView();
         mav.setViewName("register");
-        if(request.getMethod().equalsIgnoreCase("POST")) {
-            String username = request.getParameter("username");
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
-            String pwdconfirm = request.getParameter("pwdconfirm");
-            String agreeTerms = request.getParameter("agreeTerms");
 
-            Boolean checkPass = true;
+        return mav;
+    }
 
-            if(username.isEmpty() || email.isEmpty() || password.isEmpty() || pwdconfirm.isEmpty() || agreeTerms == null){
-                checkPass = false;
-            } else if(!password.equals(pwdconfirm) || !agreeTerms.equals("on")){
-                checkPass = false;
-            }
-            if(checkPass) {
-                Emoloyee user = new Emoloyee(7001, username, "MANAGER", 7002, new SimpleDateFormat("yyyy-MM-dd").format(new Date()), 8403.00, 8240.0f, 10, "ACCOUNTING", password, username+"@test.com");
-                user.setEmail(email);
-                users.add(user);
-                mav.setViewName("redirect:/");
-            }
+    // MultipartFile 是上传文件接口，对应了保存的临时文件
+    // 参数名与前端file组件的name属性保持一致
+    // @RequestParam("profile")MultipartFile photo 代表了photo参数对应于前端的 name=profile 的file
+    @PostMapping("/register/check")
+    public ModelAndView registUser(HttpServletRequest request, HttpServletResponse response, @RequestParam("profile")MultipartFile photo) throws IOException {
+
+        ModelAndView mav = new ModelAndView();
+
+        if(null == photo){
+            return mav;
         }
 
+        String username = request.getParameter("username");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String pwdconfirm = request.getParameter("pwdconfirm");
+        String agreeTerms = request.getParameter("agreeTerms");
+
+        Boolean checkPass = true;
+
+        if(username.isEmpty() || email.isEmpty() || password.isEmpty() || pwdconfirm.isEmpty() || agreeTerms == null){
+            checkPass = false;
+        } else if(!password.equals(pwdconfirm) || !agreeTerms.equals("on")){
+            checkPass = false;
+        }
+        if(checkPass) {
+            // String uploadPath = "D:/java/Applications/springboot2_demo/4-01-springboot-mvc/src/main/resources/static/users/";
+            // String filename = photo.getOriginalFilename();
+            String filename = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date());
+            String suffix = photo.getOriginalFilename().substring(photo.getOriginalFilename().lastIndexOf("."));
+            if(!suffix.equalsIgnoreCase(".JPG")){
+                throw new RuntimeException("图片格式不支持！");
+            }
+            // Spring提供了一个文件操作类 FileCopyUtils
+            FileCopyUtils.copy(photo.getInputStream(), new FileOutputStream(uploadPath+filename+suffix));
+            Emoloyee user = new Emoloyee(7001, username, "MANAGER", 7002, new SimpleDateFormat("yyyy-MM-dd").format(new Date()), 8403.00, 8240.0f, 10, "ACCOUNTING", password, username+"@test.com");
+            user.setEmail(email);
+            users.add(user);
+            mav.setViewName("redirect:/");
+        }
         return mav;
     }
 
@@ -142,6 +176,7 @@ public class HelloController {
         Map params = new LinkedHashMap();
         params.put("key word", "all");
         params.put("deptno", 10);
+
 
 
         mav.addObject("params", params);
