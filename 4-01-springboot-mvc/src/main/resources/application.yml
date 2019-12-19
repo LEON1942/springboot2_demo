@@ -20,11 +20,11 @@ spring:
       max-request-size: 25MB
       max-file-size: 2MB
       # 临时文件夹
-      location: d:/temp/
+      # location: d:/temp/
 
 app:
   upload:
-    location: d:/upload/
+    location: /Users/leon1942/Documents/java/applications/springboot2_demo/4-01-springboot-mvc/src/main/resources/static/users
 
 
 

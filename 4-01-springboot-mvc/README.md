@@ -49,19 +49,94 @@ pom.xml 相关配置
 
 
 ### 2、SpringMVC + Thymeleaf 上下文取值
+
+在 SpringBoot 中，可以通过 request 或 ModelAndView 对象向 thymeleaf 模板传递数据。
+
+在 Spring 中，可以通过在 Controller 中设置 WebRequest 参数访问 request 对象， WebRequest 是对 request 对象的包装。
+WebRequest 和 request 两者都是与J2EE容器强耦合，为了将来扩展需要，不推荐使用request对象传递参数，而使用ModelAndView对象来实现。
+
+参数设置方式：
     
+    // 向当前请求中放入对象，这种方式与WEB容器强耦合
+    request.setAttribute(key, value) 
     
+    // 向mav实例中放入对象，这种方式与WEB容器解耦合
+    ModelAndView.addObject(key, value)
+    
+Thymeleaf 获取值:
+
+    #{key} // #{} 代表获取全局对象
+    ${key} // ${} 代表获取当前会话的局部对象
 
 ### 3、Ajax
-
+    
+    $.ajax({
+         type: "POST",
+         url: "/post/url",
+         data: {username:$("#username").val(), content:$("#content").val()},
+         dataType: "json",
+         success: function(data){
+             $.each(data.list, function(index, item){
+                   ...
+             });
+         },
+         error: function(e){
+            ...
+         }
+     });
 
 ### 4、文件上传
 网页具备文件上传的3个条件：
     
-    1、post提交
-    2、具备file组件
-    3、设置表单的enctype="multipart/form-data", 默认表单的enctype是 x-www-urlencoding
+    1、post 提交
+    2、具备 input[type=file] 组件
+    3、设置表单的 enctype="multipart/form-data", 默认表单的enctype是 x-www-urlencoding
     
+Controller 接收文件，需在入参中设置 MultipartFile 类型参数:
+
+    // MultipartFile 是上传文件接口，对应了保存的临时文件
+    // 参数名与前端file组件的name属性保持一致
+    // @RequestParam("profile")MultipartFile photo 代表了photo参数对应于前端的 name=profile 的file
+    @PostMapping("/register/check")
+    public ModelAndView registUser(HttpServletRequest request, @RequestParam("profile") MultipartFile photo) throws IOException {
+
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("xxx");
+
+        if(null == photo){
+            return mav;
+        }
+        ...
+        
+        if(checkPass) {
+            // String uploadPath = "D:/java/Applications/springboot2_demo/4-01-springboot-mvc/src/main/resources/static/users/";
+            // String filename = photo.getOriginalFilename();
+            String filename = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date());
+            String suffix = photo.getOriginalFilename().substring(photo.getOriginalFilename().lastIndexOf("."));
+            if(!suffix.equalsIgnoreCase(".JPG")){
+                throw new RuntimeException("图片格式不支持！");
+            }
+            // Spring提供了一个文件操作类 FileCopyUtils
+            FileCopyUtils.copy(photo.getInputStream(), new FileOutputStream(uploadPath+filename+suffix));
+            ...
+            mav.setViewName("redirect:/");
+        }
+        return mav;
+    }
+
+设置上传文件大小限制，当大小超出限制时，WEB容器会自动拦截请求，不会发送请求到Controller
+在 application.yml 中加入 spring 的配置项：
+    
+    spring: 
+      servlet:
+        multipart:
+          # 一个请求中总文件体积大小限制
+          max-request-size: 25MB
+          # 一个请求中单文件体积限制
+          max-file-size: 2MB
+          # 上传文件时WEB容器保存文件的临时目录
+          location: d:/temp/
+
 
 ### 5、输入日期格式的转换
 
@@ -73,9 +148,19 @@ pom.xml 相关配置
 
 
 ### 8、自动跳转 404，500
+在 Springboot 中，对于常见的 Request 错误页面定义，可以通过在
+templates 目录下添加 error 目录，然后添加对应错误码的 {错误码}.html文件的形式来实现。
+
+例如常见的404和少见的500错误:
+
+    templates/error/404.html
+    templates/error/500.html
 
 
 ### 9、 启动时加载 Listener
+
+
+### 10、其他
 
     Springboot + sqlite 例子
 
