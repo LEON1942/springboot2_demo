@@ -159,10 +159,46 @@ templates 目录下添加 error 目录，然后添加对应错误码的 {错误�
 
 ### 9、 启动时加载 Listener
 
+自定义Filter：
+    
+    public class AccessRecorderFilter implements Filter {
+        @Override
+        public void init(FilterConfig filterConfig) throws ServletException {
+        }
+    
+        @Override
+        public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+            // do something
+            ...    
+        }
+    
+        @Override
+        public void destroy() {
+        }
+    }
+
+定义一个Filter注册类，通过 @Bean 注解使 SpringBoot 对其自动实例化到 IOC 容器：
+
+    // 在入口类中注册Filter
+    @Bean // @Bean 会将方法的返回对象在 SpringBoot 启动的时候放入IOC容器
+    public FilterRegistrationBean filterRegiste(){
+        FilterRegistrationBean regFilter = new FilterRegistrationBean();
+        // 注册filter
+        regFilter.setFilter(new AccessRecorderFilter());
+        // 对所有路径拦截
+        regFilter.addUrlPatterns("/*");
+        // 设置过滤器名称
+        regFilter.setName("AccessRecorder");
+        // 设置排序, 如果系统中有多个过滤器，order就决定了哪个过滤器被先执行，越小的越靠前执行
+        regFilter.setOrder(1);
+
+        return regFilter;
+    }
 
 ### 10、其他
 
     Springboot + sqlite 例子
+    https://github.com/yodfz/springboot-sqlite
 
     SpringBoot + Redis + Cookie 管理登录信息例子
     https://www.cnblogs.com/liuxiaoming123/p/7997509.html
