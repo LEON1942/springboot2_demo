@@ -8,7 +8,7 @@ spring:
     cache: false
   datasource:
     driver-class-name: org.sqlite.JDBC
-    url: jdbc:sqlite:classpath::myDb
+    url: jdbc:sqlite:classpath::myDb.sqlite
     username: root
     password: root
 

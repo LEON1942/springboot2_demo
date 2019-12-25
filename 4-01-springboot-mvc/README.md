@@ -139,11 +139,44 @@ Controller 接收文件，需在入参中设置 MultipartFile 类型参数:
 
 
 ### 5、输入日期格式的转换
+前端数据给后台使用Bean对象接收时，需要保证前端表单的name名称与Bean的属性名称一致。
 
+如果 Bean 对象包含日期类型的属性时，需要在 application.config(或.yml)中配置 Spring MVC 接收日期参数的转换格式：
+
+    spring.mvc.date-format=yyyy-MM-dd
 
 ### 6、更换 tomcat 配置 -> Jetty
+Spring Boot 支持三种内嵌的Web容器
+
+* Tomcat - 默认，最流行的web容器
+* Jetty - 性能优秀的内嵌Web容器，适用于长连接
+* Undertow - 非阻塞Web容器，性能优异，适用于高并发
+
+取消默认的 Tomcat 引用: 
     
+    <!-- 在 application.config 文件中，找到 spring-boot-starter-web 的依赖项，把 tomcat 添加到其 exclusions 标签中 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <exclusions>
+            <exclusion>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+                <groupId>org.springframework.boot</groupId>
+            </exclusion>
+        </exclusions>
+    </dependency>
     
+替换为 Jetty (添加 Jetty 引用)：
+    
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-jetty</artifactId>
+        <version>2.2.1.RELEASE</version>
+    </dependency>   
+     
+替换为 Undertow (添加 Undertow 引用)：   
+
+
 ### 7、注册 Filter，日志打印
 
 
