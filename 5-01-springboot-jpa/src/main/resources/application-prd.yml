@@ -1,0 +1,17 @@
+debug: false
+server:
+  port: 80
+  servlet:
+    context-path: /
+
+spring:
+  thymeleaf:
+    cache: true
+
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://0.0.0.0:3310/production
+
+

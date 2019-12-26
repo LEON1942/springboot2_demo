@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>管理后台 | 用户注册</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/adminlte/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="/adminlte/dist/css/ionicons.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/adminlte/dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="/adminlte/dist/css/google-font.css" rel="stylesheet">
+
+  <style>
+      .custom-file-label::after {content: "浏览";}
+  </style>
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+  <div class="register-logo">
+    <a href="/"><b>LEON</b>管理后台</a>
+  </div>
+
+  <div class="card">
+    <div class="card-body register-card-body">
+      <p class="login-box-msg">注册一个账号</p>
+
+      <form action="/register/check" method="post" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+          <input type="text" name="username" id="username" class="form-control" placeholder="用户名">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" name="email" id="email" class="form-control" placeholder="邮箱">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" name="password" id="password" class="form-control" placeholder="密码">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" name="pwdconfirm" id="pwdconfirm" class="form-control" placeholder="密码确认">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="custom-file">
+              <input type="file" data-browse="选择" class="custom-file-input" name="profile" id="profile">
+              <label class="custom-file-label" for="profile">点击上传头像</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="agreeTerms" name="agreeTerms" onchange="changeAgreement(this)">
+              <label for="agreeTerms">
+               我同意<a href="#">用户协议</a>
+              </label>
+            </div>
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="button" id="submitBtn" class="btn btn-primary btn-block disabled" onclick="checkAndSubmit(this)">注册</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+
+      <div class="social-auth-links text-center">
+        <p>- 或 -</p>
+        <a href="#" class="btn btn-block btn-primary">
+          <i class="fab fa-facebook mr-2"></i>
+          使用Facebook账户注册
+        </a>
+        <a href="#" class="btn btn-block btn-danger">
+          <i class="fab fa-google-plus mr-2"></i>
+          使用Google+账户注册
+        </a>
+      </div>
+
+      <a href="/login" class="text-center">已有账号?&nbsp;点击登录</a>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery -->
+<script src="/adminlte/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/adminlte/dist/js/adminlte.min.js"></script>
+<script src="/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+
+<script>
+
+  function checkAndSubmit(obj){
+      if($(obj).hasClass('disabled')){
+          return;
+      }
+
+      let username = $('#username').val();
+      let email = $('#email').val();
+      let password = $('#password').val();
+      let pconfirm = $('#pwdconfirm').val();
+      let agreeTerms = $('#agreeTerms').is(':checked');
+
+      if(username.trim() === ''){
+          alert("用户名不能为空！");
+          return;
+      }
+      if(email.trim() === ''){
+          alert('邮箱不能为空！');
+          return;
+      }
+      if(password.trim() === ''){
+          alert('密码不能为空！');
+          return;
+      }
+      if(pconfirm.trim() === ''){
+          alert('确认密码不能为空！');
+          return;
+      }else if(password !== pconfirm){
+          alert('两次密码输入不一致！');
+          return;
+      }
+      if(undefined === agreeTerms || !agreeTerms){
+          alert('必须同意用户协议才可注册用户！');
+          return;
+      }
+
+      $('form').submit();
+  }
+
+  function changeAgreement(obj){
+      if(obj.checked){
+          $('#submitBtn').removeClass('disabled');
+      }else{
+          $('#submitBtn').addClass('disabled');
+      }
+  }
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        bsCustomFileInput.init();
+    });
+</script>
+</body>
+</html>

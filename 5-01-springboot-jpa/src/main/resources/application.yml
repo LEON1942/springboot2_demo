@@ -1,0 +1,36 @@
+
+spring:
+  profiles:
+    active: dev
+  http:
+    encoding:
+      charset: UTF-8
+
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+
+  mvc:
+    date-format: yyyy-MM-dd
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss SSS
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      max-request-size: 25MB
+      max-file-size: 2MB
+      # 临时文件夹
+      # location: d:/temp/
+
+app:
+  upload:
+    location: /Users/leon1942/Documents/java/applications/springboot2_demo/4-01-springboot-mvc/src/main/resources/static/users
+
+
+
+
+
+
+
+
+

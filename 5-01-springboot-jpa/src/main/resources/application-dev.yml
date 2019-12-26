@@ -1,0 +1,19 @@
+debug: true
+server:
+  port: 8086
+  servlet:
+    context-path: /
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:D:\java\Applications\springboot2_demo\5-01-springboot-jpa\src\main\resources\myDb.sqlite
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: cn.makinnet.springboot.dialect.SQLiteDialect
+
