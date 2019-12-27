@@ -20,20 +20,20 @@ public class MyApplication {
 
 
     // 在入口类中注册Filter
-    @Bean // @Bean 会将方法的返回对象在 SpringBoot 启动的时候放入IOC容器
-    public FilterRegistrationBean filterRegiste(){
-        FilterRegistrationBean regFilter = new FilterRegistrationBean();
-        // 注册filter
-        regFilter.setFilter(new AccessRecorderFilter());
-        // 对所有路径拦截
-        regFilter.addUrlPatterns("/*");
-        // 设置过滤器名称
-        regFilter.setName("AccessRecorder");
-        // 设置排序, 如果系统中有多个过滤器，order就决定了哪个过滤器被先执行，越小的越靠前执行
-        regFilter.setOrder(1);
-
-        return regFilter;
-    }
+    // @Bean // @Bean 会将方法的返回对象在 SpringBoot 启动的时候放入IOC容器
+//    public FilterRegistrationBean filterRegiste(){
+//        FilterRegistrationBean regFilter = new FilterRegistrationBean();
+//        // 注册filter
+//        regFilter.setFilter(new AccessRecorderFilter());
+//        // 对所有路径拦截
+//        regFilter.addUrlPatterns("/*");
+//        // 设置过滤器名称
+//        regFilter.setName("AccessRecorder");
+//        // 设置排序, 如果系统中有多个过滤器，order就决定了哪个过滤器被先执行，越小的越靠前执行
+//        regFilter.setOrder(1);
+//
+//        return regFilter;
+//    }
 
 
     public static void main(String[] args) {

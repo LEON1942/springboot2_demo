@@ -6,6 +6,7 @@ import cn.makinnet.springboot.entity.Employee;
 import cn.makinnet.springboot.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.FileCopyUtils;
@@ -59,6 +60,15 @@ public class HelloController {
             employeeService.insertEmployee(emp);
             System.out.println("SAVE EMP[NAME:" + emp.getEname() + "] TO DATABASE.");
         }
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:/");
+        return mav;
+    }
+
+    @GetMapping("/find/{dname}")
+    public ModelAndView findByEname(@PathVariable  String dname){
+        List<Employee> employee = employeeService.findByDname(dname);
+
         ModelAndView mav = new ModelAndView();
         mav.setViewName("redirect:/");
         return mav;
